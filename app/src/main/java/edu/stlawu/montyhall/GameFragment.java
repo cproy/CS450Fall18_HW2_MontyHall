@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
+import java.util.Map;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -85,7 +86,7 @@ public class GameFragment extends Fragment {
         // Inflate the layout for this fragment
         gameView = inflater.inflate(R.layout.fragment_game, container, false);
 
-        prefs = this.getActivity().getPreferences(MODE_PRIVATE).edit();
+        prefs = this.getActivity().getSharedPreferences(MainFragment.PREF_NAME, MODE_PRIVATE).edit();
 
         // Create the doors
         doorValues = orderDoors();
@@ -104,10 +105,6 @@ public class GameFragment extends Fragment {
 
         bt_stay = gameView.findViewById(R.id.bt_stay);
         bt_switch = gameView.findViewById(R.id.bt_switch);
-
-
-
-        prefs.putBoolean("UNFINISHED", false);
 
         // Event listener to left door
         door1.getDoor().setOnClickListener(new View.OnClickListener() {
@@ -136,13 +133,12 @@ public class GameFragment extends Fragment {
         bt_stay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                prefs.putBoolean("UNFINISHED", false);
+                prefs.putBoolean("UNFINISHED", false).commit();
                 if (doorWithCar == picked){
                     wins++;
                     delayMessageChange(tv_prompt.getId(), R.string.winner, 3000);                } else {
                     losses++;
                     delayMessageChange(tv_prompt.getId(), R.string.loser, 3000);                }
-                updateGrid();
                 bt_stay.setEnabled(false);
                 bt_switch.setEnabled(false);
                 countDownDoor(door1);
@@ -154,7 +150,7 @@ public class GameFragment extends Fragment {
         bt_switch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                prefs.putBoolean("UNFINISHED", false);
+                prefs.putBoolean("UNFINISHED", false).commit();
                 if (doorWithCar == picked){
                     losses++;
                     delayMessageChange(tv_prompt.getId(), R.string.loser, 3000);
@@ -162,7 +158,6 @@ public class GameFragment extends Fragment {
                     wins++;
                     delayMessageChange(tv_prompt.getId(), R.string.winner, 3000);
                 }
-                updateGrid();
                 bt_stay.setEnabled(false);
                 bt_switch.setEnabled(false);
                 countDownDoor(door1);
@@ -205,8 +200,7 @@ public class GameFragment extends Fragment {
 
         //////////// Restore values if the Continue button has been clicked
         SharedPreferences restores = getContext().getSharedPreferences(MainFragment.PREF_NAME, MODE_PRIVATE);
-        if (!restores.getBoolean(MainFragment.NEW_CLICKED, true) && restores.getBoolean("UNFINISHED", true)) {
-            Log.d("PREFERENCES", "In restore");
+        if (!restores.getBoolean(MainFragment.NEW_CLICKED, true) && restores.getBoolean("UNFINISHED", false)) {
             doorValues = orderDoors();
 
             doorValues[0] = restores.getString("DOOR_VALUES_0", "CAR");
@@ -215,14 +209,6 @@ public class GameFragment extends Fragment {
             doorWithCar = restores.getInt("DOOR_WITH_CAR", 2);
             goatDoorIndex = restores.getInt("GOAT_DOOR_INDEX", 2);
             picked = restores.getInt("PICKED", 2);
-
-            Log.d("Preference stuff", doorValues[0]);
-            Log.d("Preference stuff", doorValues[1]);
-            Log.d("Preference stuff", doorValues[2]);
-            Log.d("Preference stuff", Integer.toString(doorWithCar));
-            Log.d("Preference stuff", Integer.toString(goatDoorIndex));
-            Log.d("Preference stuff", Integer.toString(picked));
-
 
             door1 = new MontyDoors((ImageButton) gameView.findViewById(R.id.door1), doorValues[0], 0);
             door2 = new MontyDoors((ImageButton) gameView.findViewById(R.id.door2), doorValues[1], 1);
@@ -247,6 +233,8 @@ public class GameFragment extends Fragment {
             } else if (goatDoorIndex == 2) {
                 doorChosen(door3);
             }
+        } else {
+            prefs.putBoolean("UNFINISHED", true).commit();
         }
 
         updateGrid();
@@ -256,18 +244,17 @@ public class GameFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        Log.d("PREFERENCES", "In onpause");
 
-        SharedPreferences.Editor saves = this.getActivity().getPreferences(MODE_PRIVATE).edit();
+        SharedPreferences.Editor saves = this.getActivity().getSharedPreferences(MainFragment.PREF_NAME, MODE_PRIVATE).edit();
 
         // Save the state of variables
-        saves.putInt("PICKED", this.picked).apply();
-        saves.putString("DOOR_VALUES_0", this.doorValues[0]).apply();
-        saves.putString("DOOR_VALUES_1", this.doorValues[1]).apply();
-        saves.putString("DOOR_VALUES_2", this.doorValues[2]).apply();
-        saves.putInt("DOOR_WITH_CAR", this.doorWithCar).apply();
+        saves.putInt("PICKED", this.picked).commit();
+        saves.putString("DOOR_VALUES_0", this.doorValues[0]).commit();
+        saves.putString("DOOR_VALUES_1", this.doorValues[1]).commit();
+        saves.putString("DOOR_VALUES_2", this.doorValues[2]).commit();
+        saves.putInt("DOOR_WITH_CAR", this.doorWithCar).commit();
 
-        saves.putInt("GOAT_DOOR_INDEX", this.goatDoorIndex).apply();
+        saves.putInt("GOAT_DOOR_INDEX", this.goatDoorIndex).commit();
 
 
         // Save wins/losses
@@ -292,7 +279,7 @@ public class GameFragment extends Fragment {
         if (wins != 0){
             float win_p = ((float) wins / total) * 100;
             tv_wins.setText(Integer.toString(wins));
-            tv_wins_p.setText(win_p + "%");
+            tv_wins_p.setText(String.format("%.2f", win_p) + "%");
         } else {
             tv_wins.setText("0");
             tv_wins_p.setText("0%");
@@ -300,13 +287,13 @@ public class GameFragment extends Fragment {
         if (losses != 0){
             float loss_p = ((float) losses / total) * 100;
             tv_losses.setText(Integer.toString(losses));
-            tv_losses_p.setText(loss_p + "%");
+            tv_losses_p.setText(String.format("%.2f", loss_p) + "%");
         } else {
             tv_losses.setText("0");
             tv_losses_p.setText("0%");
         }
         tv_total.setText(Integer.toString(total));
-        tv_total_p.setText("100%");
+        tv_total_p.setText("100.0%");
     }
 
     private String[] orderDoors() {
@@ -345,7 +332,8 @@ public class GameFragment extends Fragment {
     }
 
     private void doorChosen(MontyDoors choice) {
-        this.getActivity().getPreferences(MODE_PRIVATE).edit().putBoolean("UNFINISHED", true);
+        getActivity().getSharedPreferences(MainFragment.PREF_NAME, MODE_PRIVATE).edit().putBoolean("UNFINISHED", true).apply();
+        
         choice.getDoor().setImageResource(R.drawable.closed_door_chosen);
         bt_switch.setVisibility(View.VISIBLE);
         bt_stay.setVisibility(View.VISIBLE);
@@ -406,6 +394,7 @@ public class GameFragment extends Fragment {
             public void run() {
                 TextView text = getActivity().findViewById(tv_id);
                 text.setText(newText);
+                updateGrid();
             }
         }, delay);
     }

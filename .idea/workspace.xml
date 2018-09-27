@@ -6,11 +6,24 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="map" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fcff1d-e6d1-42b1-aa3f-6813b8f82bbc" name="Default" comment="" />
+    <list default="true" id="d7fcff1d-e6d1-42b1-aa3f-6813b8f82bbc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stlawu/montyhall/GameFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stlawu/montyhall/GameFragment.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_up_animation.xml" afterPath="$PROJECT_DIR$/app/src/main/res/anim/slide_up_animation.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,42 +41,40 @@
       <file leaf-file-name="GameFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/stlawu/montyhall/GameFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="166" column="44" lean-forward="false" selection-start-line="166" selection-start-column="44" selection-end-line="166" selection-end-column="44" />
+            <state relative-caret-position="109">
+              <caret line="335" column="8" lean-forward="false" selection-start-line="335" selection-start-column="8" selection-end-line="335" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#GameFragment#0;class#GameFragment#0" expanded="false" />
-                <element signature="e#3526#3675#0" expanded="true" />
-                <element signature="e#3674#3675#0" expanded="true" />
-                <element signature="e#3760#3909#0" expanded="true" />
-                <element signature="e#3908#3909#0" expanded="true" />
-                <element signature="e#3993#4142#0" expanded="true" />
-                <element signature="e#4141#4142#0" expanded="true" />
-                <element signature="e#4181#4893#0" expanded="true" />
-                <element signature="e#4462#4477#0" expanded="true" />
-                <element signature="e#4598#4612#0" expanded="true" />
-                <element signature="e#4892#4893#0" expanded="true" />
-                <element signature="e#4934#5648#0" expanded="true" />
-                <element signature="e#5217#5231#0" expanded="true" />
-                <element signature="e#5351#5366#0" expanded="true" />
-                <element signature="e#5647#5648#0" expanded="true" />
-                <element signature="e#9770#9771#0" expanded="true" />
-                <element signature="e#9803#9804#0" expanded="true" />
-                <element signature="e#9836#9837#0" expanded="true" />
-                <element signature="e#9869#9870#0" expanded="true" />
-                <element signature="e#9902#9903#0" expanded="true" />
-                <element signature="e#9935#9936#0" expanded="true" />
+                <element signature="method#onCreateView#0;class#GameFragment#0" expanded="false" />
+                <element signature="e#3528#3677#0" expanded="true" />
+                <element signature="e#3676#3677#0" expanded="true" />
+                <element signature="e#3762#3911#0" expanded="true" />
+                <element signature="e#3910#3911#0" expanded="true" />
+                <element signature="e#3995#4144#0" expanded="true" />
+                <element signature="e#4143#4144#0" expanded="true" />
+                <element signature="e#4183#4874#0" expanded="true" />
+                <element signature="e#4473#4488#0" expanded="true" />
+                <element signature="e#4609#4623#0" expanded="true" />
+                <element signature="e#4873#4874#0" expanded="true" />
+                <element signature="e#4915#5608#0" expanded="true" />
+                <element signature="e#5207#5221#0" expanded="true" />
+                <element signature="e#5341#5356#0" expanded="true" />
+                <element signature="e#5607#5608#0" expanded="true" />
+                <element signature="method#startSlideUpAnimation#0;class#GameFragment#0" expanded="false" />
+                <element signature="method#updateGrid#0;class#GameFragment#0" expanded="false" />
+                <element signature="method#orderDoors#0;class#GameFragment#0" expanded="false" />
                 <element signature="method#countDownDoor#0;class#GameFragment#0" expanded="false" />
-                <element signature="e#11037#11198#0" expanded="true" />
-                <element signature="e#11197#11198#0" expanded="true" />
-                <element signature="e#11236#11397#0" expanded="true" />
-                <element signature="e#11396#11397#0" expanded="true" />
-                <element signature="e#11435#11563#0" expanded="true" />
-                <element signature="e#11562#11563#0" expanded="true" />
-                <element signature="method#doorChosen#0;class#GameFragment#0" expanded="false" />
-                <element signature="e#11955#11975#0" expanded="true" />
-                <element signature="e#13756#13957#0" expanded="true" />
-                <element signature="e#13956#13957#0" expanded="true" />
+                <element signature="e#10695#10856#0" expanded="true" />
+                <element signature="e#10855#10856#0" expanded="true" />
+                <element signature="e#10894#11055#0" expanded="true" />
+                <element signature="e#11054#11055#0" expanded="true" />
+                <element signature="e#11093#11221#0" expanded="true" />
+                <element signature="e#11220#11221#0" expanded="true" />
+                <element signature="e#11655#11675#0" expanded="true" />
+                <element signature="method#delayMessageChange#0;class#GameFragment#0" expanded="false" />
+                <element signature="e#13456#13687#0" expanded="true" />
+                <element signature="e#13686#13687#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -335,8 +346,8 @@
       <file leaf-file-name="slide_up_animation.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_up_animation.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="45">
+              <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -386,6 +397,16 @@
       <find>get</find>
       <find>soundpool</find>
       <find>DOOR_VALUES_0</find>
+      <find>setOp</find>
+      <find>upd</find>
+      <find>dela</find>
+      <find>updateGrid();</find>
+      <find>UNFINISHED</find>
+      <find>.putBoolean(&quot;UNFINISHED&quot;, true</find>
+      <find>.putBoolean(&quot;UNFINISHED&quot;, fals</find>
+      <find>.putBoolean(&quot;UNFINISHED&quot;,</find>
+      <find>getPre</find>
+      <find>Log.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2416,9 +2437,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/animator/door.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_game.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/door.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_up_animation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_game.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/stlawu/montyhall/MontyDoors.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_up_animation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/stlawu/montyhall/GameFragment.java" />
       </list>
     </option>
@@ -2687,7 +2708,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4275568" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2698,7 +2719,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2713,15 +2734,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/edu/stlawu/montyhall/GameFragment.java</url>
-          <line>350</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2940,14 +2953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_up_animation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -3224,44 +3229,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_up_animation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/stlawu/montyhall/GameFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="166" column="44" lean-forward="false" selection-start-line="166" selection-start-column="44" selection-end-line="166" selection-end-column="44" />
+        <state relative-caret-position="109">
+          <caret line="335" column="8" lean-forward="false" selection-start-line="335" selection-start-column="8" selection-end-line="335" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#GameFragment#0;class#GameFragment#0" expanded="false" />
-            <element signature="e#3526#3675#0" expanded="true" />
-            <element signature="e#3674#3675#0" expanded="true" />
-            <element signature="e#3760#3909#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3993#4142#0" expanded="true" />
-            <element signature="e#4141#4142#0" expanded="true" />
-            <element signature="e#4181#4893#0" expanded="true" />
-            <element signature="e#4462#4477#0" expanded="true" />
-            <element signature="e#4598#4612#0" expanded="true" />
-            <element signature="e#4892#4893#0" expanded="true" />
-            <element signature="e#4934#5648#0" expanded="true" />
-            <element signature="e#5217#5231#0" expanded="true" />
-            <element signature="e#5351#5366#0" expanded="true" />
-            <element signature="e#5647#5648#0" expanded="true" />
-            <element signature="e#9770#9771#0" expanded="true" />
-            <element signature="e#9803#9804#0" expanded="true" />
-            <element signature="e#9836#9837#0" expanded="true" />
-            <element signature="e#9869#9870#0" expanded="true" />
-            <element signature="e#9902#9903#0" expanded="true" />
-            <element signature="e#9935#9936#0" expanded="true" />
+            <element signature="method#onCreateView#0;class#GameFragment#0" expanded="false" />
+            <element signature="e#3528#3677#0" expanded="true" />
+            <element signature="e#3676#3677#0" expanded="true" />
+            <element signature="e#3762#3911#0" expanded="true" />
+            <element signature="e#3910#3911#0" expanded="true" />
+            <element signature="e#3995#4144#0" expanded="true" />
+            <element signature="e#4143#4144#0" expanded="true" />
+            <element signature="e#4183#4874#0" expanded="true" />
+            <element signature="e#4473#4488#0" expanded="true" />
+            <element signature="e#4609#4623#0" expanded="true" />
+            <element signature="e#4873#4874#0" expanded="true" />
+            <element signature="e#4915#5608#0" expanded="true" />
+            <element signature="e#5207#5221#0" expanded="true" />
+            <element signature="e#5341#5356#0" expanded="true" />
+            <element signature="e#5607#5608#0" expanded="true" />
+            <element signature="method#startSlideUpAnimation#0;class#GameFragment#0" expanded="false" />
+            <element signature="method#updateGrid#0;class#GameFragment#0" expanded="false" />
+            <element signature="method#orderDoors#0;class#GameFragment#0" expanded="false" />
             <element signature="method#countDownDoor#0;class#GameFragment#0" expanded="false" />
-            <element signature="e#11037#11198#0" expanded="true" />
-            <element signature="e#11197#11198#0" expanded="true" />
-            <element signature="e#11236#11397#0" expanded="true" />
-            <element signature="e#11396#11397#0" expanded="true" />
-            <element signature="e#11435#11563#0" expanded="true" />
-            <element signature="e#11562#11563#0" expanded="true" />
-            <element signature="method#doorChosen#0;class#GameFragment#0" expanded="false" />
-            <element signature="e#11955#11975#0" expanded="true" />
-            <element signature="e#13756#13957#0" expanded="true" />
-            <element signature="e#13956#13957#0" expanded="true" />
+            <element signature="e#10695#10856#0" expanded="true" />
+            <element signature="e#10855#10856#0" expanded="true" />
+            <element signature="e#10894#11055#0" expanded="true" />
+            <element signature="e#11054#11055#0" expanded="true" />
+            <element signature="e#11093#11221#0" expanded="true" />
+            <element signature="e#11220#11221#0" expanded="true" />
+            <element signature="e#11655#11675#0" expanded="true" />
+            <element signature="method#delayMessageChange#0;class#GameFragment#0" expanded="false" />
+            <element signature="e#13456#13687#0" expanded="true" />
+            <element signature="e#13686#13687#0" expanded="true" />
           </folding>
         </state>
       </provider>
