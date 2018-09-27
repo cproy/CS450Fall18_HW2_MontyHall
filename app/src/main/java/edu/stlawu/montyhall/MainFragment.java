@@ -74,15 +74,26 @@ public class MainFragment extends Fragment {
                SharedPreferences.Editor pref_ed =
                  getActivity().getSharedPreferences(
                   PREF_NAME, Context.MODE_PRIVATE).edit();
-               pref_ed.putBoolean(NEW_CLICKED, true).apply();
+               pref_ed.putBoolean(NEW_CLICKED, true).commit();
 
                  Intent intent = new Intent(
                    getActivity(), GameActivity.class);
                  getActivity().startActivity(intent);
              }
-         }
+         });
 
-);
+         View continueButton = rootView.findViewById(R.id.continue_button);
+         continueButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 SharedPreferences.Editor pref_ed = getActivity().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE).edit();
+                 pref_ed.putBoolean(NEW_CLICKED, false).commit();
+
+                 Intent intent = new Intent(getActivity(), GameActivity.class);
+                 getActivity().startActivity(intent);
+             }
+         });
+
 
         return rootView;
     }
